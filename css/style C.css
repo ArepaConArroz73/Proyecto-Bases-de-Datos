@@ -1,0 +1,61 @@
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0 0 10px 0;
+}
+
+.input-group {
+  margin: 10px 0 10px 0;
+}
+
+.input-group label {
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+
+.barra {
+  width: 1px;
+  height: 20px;
+  background-color: #ccc;
+}
+
+.boton {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla th, .tabla td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.tabla th {
+  background-color: #f8f8f8;
+}
+
+.tabla .boton-editar {
+  background-color: #00b8d4;
+}
+
+.tabla .boton-eliminar {
+  background-color: #d9534f;
+}
+
+#alerta {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+}

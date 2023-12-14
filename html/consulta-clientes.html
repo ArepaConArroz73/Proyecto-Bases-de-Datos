@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Consulta de clientes</title>
+  <link rel="stylesheet" href="css/style C.css">
+</head>
+<body>
+  <h1 class="titulo">Consulta de clientes</h1>
+  <form action="/consulta-clientes.php" method="post">
+    <div class="input-group">
+      <label for="cedula">Cédula</label>
+      <input type="number" name="cedula" id="cedula" placeholder="Cédula" required>
+      <div class="barra"></div>
+    </div>
+    <div class="input-group">
+      <label for="direccion">Dirección</label>
+      <input type="text" name="direccion" id="direccion" placeholder="Dirección" required>
+      <div class="barra"></div>
+    </div>
+    <div class="input-group">
+      <label for="filtro">Filtro</label>
+      <select name="filtro" id="filtro">
+        <option value="todas">Todas las tablas</option>
+        <option value="clientes">Clientes</option>
+        <option value="visitas">Visitas</option>
+      </select>
+      <div class="barra"></div>
+    </div>
+    <button type="submit" class="boton">Buscar</button>
+  </form>
+  <table class="tabla">
+    <thead>
+      <tr>
+        <th>Cédula</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Dirección</th>
+        <th>Fecha de visita</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      </tbody>
+  </table>
+  <div id="alerta"></div>
+</body>
+</html>

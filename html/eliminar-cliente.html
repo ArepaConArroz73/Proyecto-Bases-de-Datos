@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar cliente</title>
+  <link rel="stylesheet" href="css/style EC.css">
+</head>
+<body>
+  <h1 class="titulo">Editar cliente</h1>
+  <form action="/editar-cliente.html" method="post">
+    <div class="input-group">
+      <label for="cedula">Buscar</label>
+      <input type="number" name="Cedula" id="cedula" placeholder="Cédula" required>
+      <div class="barra"></div>
+    </div>
+    <button type="submit" class="boton">BUSCAR</button>
+  </form>
+  <div id="alerta"></div>
+  <form action="/eliminar-cliente.php" method="post">
+    <input type="hidden" name="Cedula" id="cedula" value="">
+    <button type="submit" class="boton" id="eliminar">Eliminar</button>
+  </form>
+</body>
+</html>

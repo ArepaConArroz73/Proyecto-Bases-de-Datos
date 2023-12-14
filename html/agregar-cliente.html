@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Agregar cliente</title>
+  <link rel="stylesheet" href="css/style AC.css">
+</head>
+<body>
+  <h1 class="titulo">Nuevo cliente</h1>
+  <form action="/agregar-cliente.html" method="post">
+    <div class="input-group">
+      <label for="cedula">Cédula</label>
+      <input type="number" name="Cedula" id="cedula" placeholder="Cédula" required>
+      <div class="barra"></div>
+    </div>
+    <div class="input-group">
+      <label for="nombre">Nombre</label>
+      <input type="text" name="Nombre" id="nombre" placeholder="Nombre" required>
+      <div class="barra"></div>
+    </div>
+    <div class="input-group">
+      <label for="apellido">Apellido</label>
+      <input type="text" name="Apellido" id="apellido" placeholder="Apellido" required>
+      <div class="barra"></div>
+    </div>
+    <div class="input-group">
+      <label for="direccion">Dirección</label>
+      <input type="text" name="Direccion" id="direccion" placeholder="Dirección" required>
+      <div class="barra"></div>
+    </div>
+    <button type="submit" class="boton">Enviar</button>
+  </form>
+  <div id="alerta"></div>
+</body>
+</html>

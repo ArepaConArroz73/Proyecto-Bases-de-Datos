@@ -1,0 +1,35 @@
+
+  const Cedula = req.body.Cedula;
+  const Nombre = req.body.Nombre;
+  const apellido = req.body.apellido;
+  const direccion = req.body.direccion;
+
+  const db = new sql.Database("mysql://root:password@localhost/proyecto", {
+    type: "mysql",
+  });
+
+  const mysql = require('mysql');
+const connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'R',
+  password : '',
+  database : 'proyecto'
+});
+
+connection.connect((err) => {
+  if (err) throw err;
+  console.log('Conectado a la base de datos MySQL!');
+});
+
+// Insertar los datos en la base de datos
+  db.execute("INSERT INTO clientes (Cedula, nombre, apellido, direccion) VALUES (?, ?, ?, ?)", [cedula, nombre, apellido, direccion], {
+    onDuplicateKey: (tx) => {
+      tx.execute("UPDATE clientes SET Cedula = ?, nombre = ?, apellido = ?, direccion = ?", [cedula, nombre, apellido, direccion,]);
+    },
+  });
+
+  // Cerrar la conexión a la base de datos
+  db.close();
+
+  // Mostrar mensaje de registro exitoso
+  res.send("Registro exitoso!");

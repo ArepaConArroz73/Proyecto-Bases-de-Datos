@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar cliente</title>
+  <link rel="stylesheet" href="css/style EC.css">
+</head>
+<body>
+  <h1 class="titulo">Editar cliente</h1>
+  <form action="/editar-cliente.html" method="post">
+    <div class="input-group">
+      <label for="cedula">Buscar</label>
+      <input type="number" name="Cedula" id="cedula" placeholder="Cédula" required>
+      <div class="barra"></div>
+    </div>
+    <button type="submit" class="boton">BUSCAR</button>
+  </form>
+    </div>
+    <div class="input-group">
+      <label for="nombre">Nombre</label>
+      <input type="text" name="Nombre" id="nombre" placeholder="Nombre" required>
+      <div class="barra"></div>
+    </div>
+    <div class="input-group">
+      <label for="apellido">Apellido</label>
+      <input type="text" name="Apellido" id="apellido" placeholder="Apellido" required>
+      <div class="barra"></div>
+    </div>
+    <div class="input-group">
+      <label for="direccion">Dirección</label>
+      <input type="text" name="Direccion" id="direccion" placeholder="Dirección" required>
+      <div class="barra"></div>
+    </div>
+    <button type="submit" class="boton">Guardar cambios</button>
+  </form>
+  <div id="alerta"></div>
+</body>
+</html>
